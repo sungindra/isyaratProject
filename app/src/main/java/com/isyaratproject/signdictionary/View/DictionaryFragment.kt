@@ -28,7 +28,8 @@ class DictionaryFragment : Fragment() {
         homeViewModel =
                 ViewModelProviders.of(this).get(DictionaryViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_dictionary, container, false)
-        dictionaryCategoryTxt.text = "Category:"
+        val categoryTitle: TextView = root.findViewById(R.id.dictionaryCategoryTxt)
+        categoryTitle.text = "Category:"
         //Adapter = DictionaryAdapter(this, SampleDataService.dictionaries)
 
         return root
