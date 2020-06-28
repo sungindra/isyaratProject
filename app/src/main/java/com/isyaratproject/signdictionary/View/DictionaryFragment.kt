@@ -11,6 +11,7 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.isyaratproject.signdictionary.Adapter.DictionaryAdapter
 import com.isyaratproject.signdictionary.R
+import com.isyaratproject.signdictionary.Utilities.SampleDataService
 import com.isyaratproject.signdictionary.ViewModel.DictionaryViewModel
 import kotlinx.android.synthetic.main.fragment_dictionary.*
 
@@ -28,7 +29,7 @@ class DictionaryFragment : Fragment() {
                 ViewModelProviders.of(this).get(DictionaryViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_dictionary, container, false)
         dictionaryCategoryTxt.text = "Category:"
-        // Adapter = DictionaryAdapter(this, "")
+        //Adapter = DictionaryAdapter(this, SampleDataService.dictionaries)
 
         return root
     }
