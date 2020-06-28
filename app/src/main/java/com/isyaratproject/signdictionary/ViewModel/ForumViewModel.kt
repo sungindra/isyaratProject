@@ -1,4 +1,4 @@
-package com.isyaratproject.signdictionary.ui.forum
+package com.isyaratproject.signdictionary.ViewModel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

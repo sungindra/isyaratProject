@@ -1,4 +1,4 @@
-package com.isyaratproject.signdictionary.Controller
+package com.isyaratproject.signdictionary.View
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
