@@ -4,7 +4,7 @@ import com.isyaratproject.signdictionary.Model.*
 
 object SampleDataService {
 
-    var dictionaries = arrayListOf<Dictionary>(
+    var dictionaries = arrayListOf<ImageSign>(
 
     )
 
