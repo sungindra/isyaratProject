@@ -20,6 +20,8 @@ class ForumFragment : Fragment() {
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
+        // load every time the forum fragment called during launch, switch fragments between detailed one and everytime for search a category
+        // category starter is abjad bisindo
         forumViewModel =
                 ViewModelProviders.of(this).get(ForumViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_forum, container, false)
