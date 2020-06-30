@@ -15,7 +15,7 @@ class CreateAccount : AppCompatActivity() {
             val usernameTxt = registerUsernameTxtField.text.toString()
             val emailTxt = registerEmailTxtField.text.toString()
             val passwordTxt = registerPasswordTxtField.text.toString()
-            if (sendNewUserData2Server(usernameTxt, emailTxt, passwordTxt)){
+            if (uploadNewUserData2Server(usernameTxt, emailTxt, passwordTxt)){
                 // successful send to server
                 // use getPreferance or Intent to pass data
 
@@ -29,7 +29,7 @@ class CreateAccount : AppCompatActivity() {
         }
     }
 
-    fun sendNewUserData2Server(usernameTxt: String, emailTxt: String, passwordTxt: String): Boolean{
+    fun uploadNewUserData2Server(usernameTxt: String, emailTxt: String, passwordTxt: String): Boolean{
 
 
         try{
