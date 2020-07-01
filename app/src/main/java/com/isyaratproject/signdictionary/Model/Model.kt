@@ -1,5 +1,6 @@
 package com.isyaratproject.signdictionary.Model
 
+const val ExtraForumID = "0"
 
 class ImageSign(val ImageID: Int, val ImageURL: String, val ImageTitle: String, val CategoryName: String, val Username: String, val ImageDate: String)
 

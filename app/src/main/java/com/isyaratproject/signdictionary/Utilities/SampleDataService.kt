@@ -90,12 +90,22 @@ object DictionaryDataService {
         ImageSign(202010, "sibi_10", "Angka 10", "Angka_Sibi", "Admin", "25-06-2020")
     )
 
+    fun getSearchedDictionary(categorySelected: String): List<ImageSign>{
+        return when(categorySelected){
+            "Abjad - Bisindo" -> Dictionary_Abjad_Bisindo
+            "Abjad - Sibi" -> Dictionary_Abjad_Sibi
+            "Angka - Bisindo" -> Dictionary_Angka_Bisindo
+            "Angka - Sibi" -> Dictionary_Angka_Sibi
+            else -> Dictionary_Abjad_Bisindo
+        }
+    }
+
 }
 
 // Forum
 
 object ForumDataService{
-    var Forum_Abjad_Angka = arrayListOf<Post>(
+    var Forum_Abjad_Bisindo = arrayListOf<Post>(
         Post(101001, "Menamakan bank BCB?", "Abjad_Bisindo", "Daniel", "27-06-2020",72),
         Post(101002, "Huruf Bisindo E? gimana mengabjadkan E dalam isyarat?", "Abjad_Bisindo", "Mikhail", "27-06-2020",12),
         Post(101003, "Saya mau mengejakan nama saya dalam Bisindo, Spellingnya bagaimana?", "Abjad_Bisindo", "Jimmy", "27-06-2020",1),
@@ -106,12 +116,31 @@ object ForumDataService{
         Post(101008, "Ada perbedaan bahasa isyarat antar daerah? Ada Panduannya?", "Abjad_Bisindo", "Wess", "27-06-2020",55)
         )
 
+    var Forum_Abjad_Sibi = arrayListOf<Post>(
+        Post(201001, "Terjemahaan di Sibi apa? Terjemahan Bisindo saya tidak dimengerti di komunitas lain", "Abjad_Sibi", "Andrew", "27-06-2020", 125),
+        Post(201002, "Mau mengejakan nama bank HSHS untuk Sibi, ada yang bisa bantu saya?","Abjad_Sibi", "Tony", "27-06-2020", 56),
+        Post(201003, "Huruf Hidup di Sibi?", "Abjad_Sibi", "Po", "27-06-2020", 7),
+        Post(201004, "Bagaimana cara saya mengejakan Budi?","Abjad_Sibi", "Mike", "27-06-2020", 21),
+        Post(201005, "Ada panduan lengkap untuk bahasa isyarat Sibi? Masih membutuhkan pengetahuan.", "Abjad_Sibi", "Nathalie", "27-06-2020", 200),
+        Post(201006, "Isyarat O untuk Sibi apa? bukan 0", "Abjad_Sibi", "Poly", "27-06-2020", 39),
+        Post(201007, "Membutuhkan panduan meng-ejakan SDK, ada sugesti?", "Abjad_Sibi", "Bernardus", "27-06-2020", 27),
+        Post(201008, "Saya butuh bantuan untuk pengertian isyarat Sibi, ada panduan khusus untuk daerah Makassar?", "Abjad_Sibi", "Salemn", "27-06-2020", 135)
+    )
+
+    fun getSearchedForum(categorySelected: String): List<Post>{
+        return when(categorySelected){
+            "Abjad - Bisindo" -> Forum_Abjad_Bisindo
+            "Abjad - Sibi" -> Forum_Abjad_Sibi
+            else -> Forum_Abjad_Bisindo
+        }
+    }
+
 }
 
 // Comment
 
 object CommentDataService{
     var comments = arrayListOf<Comment>(
-
+        Comment(1, 101001, 101001, 52, true)
     )
 }
