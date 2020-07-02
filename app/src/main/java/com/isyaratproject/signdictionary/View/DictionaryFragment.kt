@@ -19,7 +19,6 @@ import com.isyaratproject.signdictionary.ViewModel.DictionaryViewModel
 class DictionaryFragment : Fragment() {
 
     private lateinit var homeViewModel: DictionaryViewModel
-    lateinit var  categoryAdapter: ArrayAdapter<String>
 
     override fun onCreateView(
             inflater: LayoutInflater,

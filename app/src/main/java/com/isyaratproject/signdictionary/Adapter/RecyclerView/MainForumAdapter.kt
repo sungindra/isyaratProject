@@ -4,18 +4,23 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.isyaratproject.signdictionary.Model.Post
 import com.isyaratproject.signdictionary.R
 
 class MainForumAdapter(val context: Context, val postEntries: List<Post>, val itemClick: (Post) -> Unit): RecyclerView.Adapter<MainForumAdapter.Holder>() {
     inner class Holder(itemView: View, val itemClick: (Post) -> Unit) : RecyclerView.ViewHolder(itemView) {
+        val postTitle = itemView.findViewById<TextView>(R.id.postTitleTxt)
+        val postAuthor = itemView.findViewById<TextView>(R.id.postAuthorTxt)
+        val postDate = itemView.findViewById<TextView>(R.id.postDateTxt)
 
         fun bindPostForum(post: Post, context: Context){
-
+            postTitle?.text = post.PostTitle
+            postAuthor?.text = post.Username
+            postDate?.text = post.PostDate
             itemView.setOnClickListener { itemClick(post) }
         }
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {

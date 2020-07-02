@@ -18,9 +18,12 @@ class DictionaryAdapter(val context: Context, val dictionaryEntries: List<ImageS
         val dictionaryImage = itemView.findViewById<ImageView>(R.id.dictionaryImage)
 
         fun bindDictionary(dictionary: ImageSign, context: Context){
-
+            val ResourceID = context.resources.getIdentifier("ic_launcher_background","drawable", context.packageName)
+            dictionaryTitle?.text = dictionary.ImageTitle
+            dictionaryAuthor?.text = dictionary.Username
+            dictionaryDate?.text = dictionary.ImageDate
+            dictionaryImage?.setImageResource(ResourceID)
         }
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
