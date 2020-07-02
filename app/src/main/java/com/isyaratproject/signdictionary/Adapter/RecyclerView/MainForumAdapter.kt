@@ -1,4 +1,4 @@
-package com.isyaratproject.signdictionary.Adapter
+package com.isyaratproject.signdictionary.Adapter.RecyclerView
 
 import android.content.Context
 import android.view.LayoutInflater

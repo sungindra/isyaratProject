@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Spinner
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
@@ -26,6 +27,8 @@ class DictionaryFragment : Fragment() {
         val root = inflater.inflate(R.layout.fragment_dictionary, container, false)
         val categoryTitle: TextView = root.findViewById(R.id.dictionaryCategoryTxt)
         categoryTitle.text = "Category:"
+        val categorySpinner: Spinner = root.findViewById(R.id.dictionaryCategorySpinner)
+
         return root
     }
 }
