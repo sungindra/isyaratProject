@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="300dp">
+    android:layout_height="200dp">
 
     <View
         android:id="@+id/dictionaryBackground"
@@ -19,10 +19,10 @@
         android:id="@+id/dictionaryTitleTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
         android:text="TextView"
-        android:textSize="18sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -33,9 +33,10 @@
         android:id="@+id/dictionaryAuthorTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
         android:text="TextView"
+        android:textSize="12sp"
         app:layout_constraintEnd_toStartOf="@+id/dictionaryDateTxt"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,9 +46,10 @@
         android:id="@+id/dictionaryDateTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="12dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="8dp"
         android:text="TextView"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -55,7 +57,7 @@
         android:id="@+id/dictionaryImage"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="50dp"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -11,13 +11,15 @@ import com.isyaratproject.signdictionary.R
 
 class MainForumAdapter(val context: Context, val postEntries: List<Post>, val itemClick: (Post) -> Unit): RecyclerView.Adapter<MainForumAdapter.Holder>() {
     inner class Holder(itemView: View, val itemClick: (Post) -> Unit) : RecyclerView.ViewHolder(itemView) {
+        val postPoint = itemView.findViewById<TextView>(R.id.postPointTxt)
         val postTitle = itemView.findViewById<TextView>(R.id.postTitleTxt)
         val postAuthor = itemView.findViewById<TextView>(R.id.postAuthorTxt)
         val postDate = itemView.findViewById<TextView>(R.id.postDateTxt)
 
         fun bindPostForum(post: Post, context: Context){
+            postPoint?.text = post.PostPoint.toString()
             postTitle?.text = post.PostTitle
-            postAuthor?.text = post.Username
+            postAuthor?.text = "By: " + post.Username
             postDate?.text = post.PostDate
             itemView.setOnClickListener { itemClick(post) }
         }

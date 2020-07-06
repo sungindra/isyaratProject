@@ -20,7 +20,7 @@ class DictionaryAdapter(val context: Context, val dictionaryEntries: List<ImageS
         fun bindDictionary(dictionary: ImageSign, context: Context){
             val ResourceID = context.resources.getIdentifier("ic_launcher_background","drawable", context.packageName)
             dictionaryTitle?.text = dictionary.ImageTitle
-            dictionaryAuthor?.text = dictionary.Username
+            dictionaryAuthor?.text = "By: " + dictionary.Username
             dictionaryDate?.text = dictionary.ImageDate
             dictionaryImage?.setImageResource(ResourceID)
         }
