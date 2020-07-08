@@ -7,17 +7,14 @@ import android.view.ViewGroup
 import android.widget.Spinner
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.isyaratproject.signdictionary.Adapter.RecyclerView.MainForumAdapter
+import com.isyaratproject.signdictionary.Adapter.MainForumAdapter
 import com.isyaratproject.signdictionary.R
-import com.isyaratproject.signdictionary.Utilities.DictionaryDataService
 import com.isyaratproject.signdictionary.Utilities.ForumDataService
 import com.isyaratproject.signdictionary.ViewModel.ForumViewModel
-import kotlinx.android.synthetic.main.fragment_dictionary.*
 
 class ForumFragment : Fragment() {
 

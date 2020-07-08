@@ -4,14 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
-import android.widget.Spinner
-import android.widget.TextView
+import android.widget.*
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.isyaratproject.signdictionary.Adapter.RecyclerView.DictionaryAdapter
+import com.isyaratproject.signdictionary.Adapter.DictionaryAdapter
 import com.isyaratproject.signdictionary.R
 import com.isyaratproject.signdictionary.Utilities.*
 import com.isyaratproject.signdictionary.ViewModel.DictionaryViewModel
@@ -33,6 +31,25 @@ class DictionaryFragment : Fragment() {
         val categoryTitle: TextView = root.findViewById(R.id.dictionaryCategoryTxt)
         val dictionaryRecyclerVew: RecyclerView = root.findViewById(R.id.dictionaryRecyclerView)
         val categorySpinner: Spinner = root.findViewById(R.id.dictionaryCategorySpinner)
+
+        val arrayAdapter = ArrayAdapter<String>(root.context, android.R.layout.simple_spinner_item, CategoryListDataService.categoryDropDownList)
+        categorySpinner.adapter = arrayAdapter
+
+        categorySpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+
+            }
+
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+                Toast.makeText(root.context, CategoryListDataService.categoryDropDownList[position], Toast.LENGTH_SHORT).show()
+            }
+
+        }
 
         categoryTitle.text = "Category:"
         dictionaryRecyclerVew.adapter = DictionaryAdapter(root.context, DictionaryDataService.Dictionary_Abjad_Bisindo)
