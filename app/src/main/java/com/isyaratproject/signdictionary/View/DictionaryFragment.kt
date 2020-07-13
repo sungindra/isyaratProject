@@ -33,6 +33,8 @@ class DictionaryFragment : Fragment() {
         val categorySpinner: Spinner = root.findViewById(R.id.dictionaryCategorySpinner)
 
         val arrayAdapter = ArrayAdapter<String>(root.context, android.R.layout.simple_spinner_item, CategoryListDataService.categoryDropDownList)
+
+        categoryTitle.text = "Category:"
         categorySpinner.adapter = arrayAdapter
 
         categorySpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
@@ -46,15 +48,12 @@ class DictionaryFragment : Fragment() {
                 position: Int,
                 id: Long
             ) {
-                Toast.makeText(root.context, CategoryListDataService.categoryDropDownList[position], Toast.LENGTH_SHORT).show()
+                dictionaryRecyclerVew.adapter = DictionaryAdapter(root.context, DictionaryDataService.getSearchedDictionary(CategoryListDataService.categoryDropDownList[position]))
+                dictionaryRecyclerVew.layoutManager = LinearLayoutManager(root.context)
+                dictionaryRecyclerVew.setHasFixedSize(true)
             }
 
         }
-
-        categoryTitle.text = "Category:"
-        dictionaryRecyclerVew.adapter = DictionaryAdapter(root.context, DictionaryDataService.Dictionary_Abjad_Bisindo)
-        dictionaryRecyclerVew.layoutManager = LinearLayoutManager(root.context)
-        dictionaryRecyclerVew.setHasFixedSize(true)
 
         return root
     }
