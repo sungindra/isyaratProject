@@ -16,33 +16,39 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/upvoteImage"
+        android:id="@+id/upvoteCommentImage"
         android:layout_width="36dp"
         android:layout_height="12dp"
+        android:layout_marginStart="19dp"
         android:layout_marginTop="2dp"
         app:layout_constraintEnd_toStartOf="@+id/commentSignImage"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/arrow_up_float" />
 
     <TextView
-        android:id="@+id/pointCounterTxt"
+        android:id="@+id/commentPointCounterTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:text="TextView"
         android:textSize="10sp"
-        app:layout_constraintBottom_toTopOf="@+id/downvoteImage"
+        app:layout_constraintBottom_toTopOf="@+id/downvoteCommentImage"
         app:layout_constraintEnd_toStartOf="@+id/commentSignImage"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/upvoteImage" />
+        app:layout_constraintTop_toBottomOf="@+id/upvoteCommentImage" />
 
     <ImageView
-        android:id="@+id/downvoteImage"
+        android:id="@+id/downvoteCommentImage"
         android:layout_width="36dp"
         android:layout_height="12dp"
+        android:layout_marginStart="19dp"
         android:layout_marginBottom="2dp"
         app:layout_constraintBottom_toTopOf="@+id/commentSignImage"
         app:layout_constraintEnd_toStartOf="@+id/commentSignImage"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@android:drawable/arrow_down_float" />
 
@@ -50,28 +56,28 @@
         android:id="@+id/commentTitleTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="75dp"
         android:layout_marginTop="4dp"
         android:text="TextView"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/upvoteImage"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/commentAuthorTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="75dp"
         android:layout_marginTop="4dp"
         android:text="TextView"
         android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@+id/commentSignImage"
         app:layout_constraintEnd_toStartOf="@+id/commentDateTxt"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/downvoteImage"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/commentTitleTxt"
         app:layout_constraintVertical_bias="0.0" />
 

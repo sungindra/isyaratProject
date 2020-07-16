@@ -1,5 +1,6 @@
 package com.isyaratproject.signdictionary.View
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -52,7 +53,8 @@ class ForumFragment : Fragment() {
                 id: Long
             ) {
                 mainForumRecyclerView.adapter = MainForumAdapter(root.context, ForumDataService.getSearchedForum(CategoryListDataService.categoryDropDownList[position])){ mainForum ->
-
+                    val mainForumIntent = Intent(root.context, DetailForumFragment:: class.java)
+                    startActivity(mainForumIntent)
                 }
                 mainForumRecyclerView.layoutManager = LinearLayoutManager(root.context)
                 mainForumRecyclerView.setHasFixedSize(true)
@@ -63,7 +65,8 @@ class ForumFragment : Fragment() {
 
 
         createPostBtn.setOnClickListener { createPost ->
-
+            val createPostIntent = Intent(root.context, CreatePost:: class.java)
+            startActivity(createPostIntent)
         }
         return root
     }

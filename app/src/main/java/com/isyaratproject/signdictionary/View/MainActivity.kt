@@ -1,6 +1,8 @@
 package com.isyaratproject.signdictionary.View
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -8,6 +10,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.isyaratproject.signdictionary.R
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -25,5 +28,16 @@ class MainActivity : AppCompatActivity() {
         ))
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        loginTxt.setOnClickListener {
+            val loginIntent = Intent(this, Login:: class.java)
+            startActivity(loginIntent)
+            Toast.makeText(this, "Login", Toast.LENGTH_SHORT).show()
+        }
+
+        registerTxt.setOnClickListener {
+            val registerIntent = Intent(this, CreateAccount:: class.java)
+            startActivity(registerIntent)
+        }
     }
 }
