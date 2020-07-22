@@ -31,14 +31,12 @@ class ForumFragment : Fragment() {
         forumViewModel =
                 ViewModelProviders.of(this).get(ForumViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_forum, container, false)
-        val categoryTitle = root.findViewById<TextView>(R.id.mainForumCategoryTxt)
         val mainForumRecyclerView = root.findViewById<RecyclerView>(R.id.mainForumRecyclerView)
         val categorySpinner = root.findViewById<Spinner>(R.id.mainForumCategorySpinner)
         val createPostBtn = root.findViewById<FloatingActionButton>(R.id.createPostFloatingActionButton)
 
         val arrayAdapter = ArrayAdapter<String>(root.context, android.R.layout.simple_spinner_item, CategoryListDataService.categoryDropDownList)
 
-        categoryTitle.text = "Category:"
         categorySpinner.adapter = arrayAdapter
 
         categorySpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{

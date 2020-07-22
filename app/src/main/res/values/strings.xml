@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">signdictionary</string>
+    <string name="ActionBarTitle">Sign Dictionary</string>
+    <string name="CategoryTitleOption">Category:</string>
     <string name="title_dictionary">Dictionary</string>
     <string name="title_forum">Forum</string>
 </resources>

@@ -28,13 +28,11 @@ class DictionaryFragment : Fragment() {
         homeViewModel =
                 ViewModelProviders.of(this).get(DictionaryViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_dictionary, container, false)
-        val categoryTitle: TextView = root.findViewById(R.id.dictionaryCategoryTxt)
         val dictionaryRecyclerVew: RecyclerView = root.findViewById(R.id.dictionaryRecyclerView)
         val categorySpinner: Spinner = root.findViewById(R.id.dictionaryCategorySpinner)
 
         val arrayAdapter = ArrayAdapter<String>(root.context, android.R.layout.simple_spinner_item, CategoryListDataService.categoryDropDownList)
 
-        categoryTitle.text = "Category:"
         categorySpinner.adapter = arrayAdapter
 
         categorySpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
